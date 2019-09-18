@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+
+<style>
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1;
+  border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+html {
+    font-size:10px;
+} 
+
+
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+
+</style>
+{% load static %}
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<script type=text/javascript></script>
+
+</head>
+
+
+<body>
+
+
+<div class="col-md-8 offset-md-0">
+    <h1>Projects Status Index</h1>
+    <hr>
+    {% for status in projects_status %}
+    <h3>{{ status.task }} </h3>
+	<h4> Project Owner : {{ status.project_owner }}  <h4>
+	<h4>	PIC IT :	{{ status.user }}   <h4>
+
+<h4>  User Requirements :  {% if status.user_requirements %} {{ status.user_requirements }}  {% else %}   0   {% endif %}
+ </br>
+<h4>  Developments : {% if status.development %} {{ status.development }} {% else %} 0 {% endif %}
+ </br> 
+<h4>  SIT : {% if status.sit %} {{ status.sit }} {% else %} 0 {% endif %} 
+ </br>
+<h4>  UAT : {% if status.uat %} {{ status.uat }} {% else %} 0 {% endif %}
+ </br>  
+<h4>  Implementation : {% if status.implementation %}  {{ status.implementation }} {% else %} 0 {% endif %}
+  
+
+  
+ <hr>
+ {% endfor %}
+ <a href="/"><h3>Back</h3></a>
+</div>
+        
+   
+</div>
+
+
+
+</body>
+</html>
+ 

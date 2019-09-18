@@ -1,0 +1,2 @@
+1.ganti nama db,user,dan pass di settings.py
+2.ganti path yang ada di wsgi_windows.py sesuai path di server

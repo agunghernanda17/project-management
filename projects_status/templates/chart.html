@@ -1,0 +1,52 @@
+<div id="container"></div>
+
+{% load static %}
+<script src="{% static 'js/highcharts.src.js' %}"></script>
+
+<script>
+
+  var randomColorGenerator = function () {
+    return '#' + (Math.random().toString(16) + '0000000').slice(2, 8);
+  };
+
+
+  Highcharts.chart('container', {
+      chart: {
+          type: 'column'
+      },
+      title: {
+          text: 'Projects Status'
+      },
+      xAxis: {
+		 
+         categories: {{ new_data|safe }},
+		 
+      },
+      series: [{
+          name: 'User Requirement',
+          data: {{ new_user_req }},
+          color: randomColorGenerator()
+      }, {
+          name: 'Development',
+          data: {{ new_dev }},
+          color: randomColorGenerator()
+      }, {
+          name: 'SIT',
+          data: {{ new_sit }},
+          color: randomColorGenerator()
+	  
+	  }, {
+          name: 'UAT',
+          data: {{ new_uat }},
+          color: randomColorGenerator()
+	  
+	  },{
+          name: 'Implementation',
+          data: {{ new_imp }},
+          color: randomColorGenerator()
+	  
+	  },
+	  
+	  ]
+  });
+</script>
