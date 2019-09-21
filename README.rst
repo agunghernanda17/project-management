@@ -7,7 +7,7 @@ with **Django Admin**.
 * I modified this project to help the needs in the office.
 * This project runs on Windows
 
-.. image:: docs/source/_static/img/django-coleman.png
+.. image:: docs/source/_static/img/django-coleman_.png
    :alt: Django Coleman
 
 Requirements
