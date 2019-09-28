@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'django_session_timeout.middleware.SessionTimeoutMiddleware', #new
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -59,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'coleman.urls'
 
@@ -234,5 +236,6 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
-# SESSION AGE 10 Minutes
-SESSION_COOKIE_AGE = 10*60
+#SESSION_COOKIE_AGE = 10*60
+SESSION_EXPIRE_SECONDS = 1800  # 1 hour
+SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True

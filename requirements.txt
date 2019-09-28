@@ -7,6 +7,7 @@ django-appconf==1.0.3
 django-braces==1.13.0
 django-compressor==2.3
 django-libsass==0.7
+django-session-timeout==0.0.4
 djangorestframework==3.9.3
 libsass==0.19.2
 mod-wsgi==4.6.7
