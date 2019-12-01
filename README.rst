@@ -32,8 +32,10 @@ Install dependencies with::
 Create the database with::
 
     $ python3 manage.py makemigrations
-    $ python3 manage.py makemigrations mtasks
-    $ python3 manage.py makemigrations partner
+    $ python3 manage.py makemigrations aplikasi
+    $ python3 manage.py makemigrations projects
+    $ python3 manage.py makemigrations projects_status
+    $ python3 manage.py makemigrations vendor
     $ python3 manage.py migrate
 
 To create an admin user::
