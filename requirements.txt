@@ -10,7 +10,7 @@ django-libsass==0.7
 django-session-timeout==0.0.4
 djangorestframework==3.9.3
 libsass==0.19.2
-mod-wsgi==4.6.7
+mod-wsgi==4.9.3
 mysqlclient==1.4.4
 PyMySQL==0.9.3
 pytz==2019.2
